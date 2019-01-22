@@ -78,6 +78,7 @@ REG ADD "HKLM\SYSTEM\ControlSet001\Hardware Profiles\UnitedVideo\CONTROL\VIDEO\{
 REG ADD "HKLM\SYSTEM\ControlSet001\Hardware Profiles\UnitedVideo\CONTROL\VIDEO\{A93E238F-4F59-11E8-BE4C-806E6F6E6963}\0000" /v DefaultSettings.YResolution /t REG_DWORD /d 1080 /f
 Write-Host "Changing RunOnce script." -foregroundcolor "magenta"
 $RunOnceKey = "HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce"
-set-itemproperty $RunOnceKey "NextRun" ('C:\Windows\System32\WindowsPowerShell\v1.0\Powershell.exe -executionPolicy Unrestricted -File ' + "C:\2.ps1")
+set-itemproperty $RunOnceKey "NextRun" ('cmd.exe /C Powershell.exe –ExecutionPolicy Bypass -noexit -file C:\2.ps1')
+#set-itemproperty $RunOnceKey "NextRun" ('C:\Windows\System32\WindowsPowerShell\v1.0\Powershell.exe -executionPolicy Unrestricted -File ' + "C:\2.ps1")
 # Ïåðåçàãðóæàåì ñèñòåìó
 Restart-Computer
