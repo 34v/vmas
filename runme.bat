@@ -9,4 +9,4 @@ reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v ForceUnl
 reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DefaultDomainName /t REG_SZ /d ".\"
 C:\Windows\System32\WindowsPowerShell\v1.0\Powershell.exe -executionPolicy Unrestricted -file c:\1.ps1
 pause
-rem C:\Windows\System32\WindowsPowerShell\v1.0\Powershell.exe -executionPolicy Unrestricted -file ' + "C:\1.ps1`"
+rem C:\Windows\System32\WindowsPowerShell\v1.0\Powershell.exe -executionPolicy Bypass -file ' + "C:\1.ps1`"
