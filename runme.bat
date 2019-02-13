@@ -7,6 +7,6 @@ reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DefaultP
 reg delete "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v AutoLogonCount /f
 reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v ForceUnlockLogon  /t REG_DWORD /d 1 /f
 reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DefaultDomainName /t REG_SZ /d ".\"
-C:\Windows\System32\WindowsPowerShell\v1.0\Powershell.exe -executionPolicy Unrestricted -file c:\1.ps1
+C:\Windows\System32\WindowsPowerShell\v1.0\Powershell.exe -executionPolicy Bypass -file c:\1.ps1
 pause
 rem C:\Windows\System32\WindowsPowerShell\v1.0\Powershell.exe -executionPolicy Bypass -file ' + "C:\1.ps1`"
